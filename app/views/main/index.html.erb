@@ -10,6 +10,7 @@
         <p>
             {{timeago created_time}}
         </p>
+        <p>from you {{distance location}}</p>
         <img src={{images.standard_resolution.url}}>
         <p>
             likes: {{likes.count}}
@@ -60,12 +61,41 @@
 </script>
 
 <script type="text/javascript">
+    var longitude = 0, latitude = 0;
     Handlebars.registerHelper('timeago', function(timestamp) {
       return moment.unix(timestamp).startOf('second').fromNow();
     });
+    Handlebars.registerHelper('distance', function(coordinates) {
+        if(coordinates !== null){
+            var name =  coordinates.name !== undefined ? "(" + coordinates.name + ")" : ''
+            return distance(coordinates.latitude, coordinates.longitude, latitude, longitude, 'K').toFixed(1) + " Km" + name;
+        } else {
+            return "unknown"
+        }
+    });
+
     $("#feed-container").html("LOADING...");
     navigator.geolocation.getCurrentPosition(loadPosition)
+
+    function distance(lat1, lon1, lat2, lon2, unit) {
+        var radlat1 = Math.PI * lat1/180
+        var radlat2 = Math.PI * lat2/180
+        var radlon1 = Math.PI * lon1/180
+        var radlon2 = Math.PI * lon2/180
+        var theta = lon1-lon2
+        var radtheta = Math.PI * theta/180
+        var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+        dist = Math.acos(dist)
+        dist = dist * 180/Math.PI
+        dist = dist * 60 * 1.1515
+        if (unit=="K") { dist = dist * 1.609344 }
+        if (unit=="N") { dist = dist * 0.8684 }
+        return dist
+    }
+
     function loadPosition(oPosition) {
+        longitude = oPosition.coords.longitude;
+        latitude = oPosition.coords.latitude;
         $.ajax({
           type: "GET",
           url: "/api/get_location_ids.json?long="+oPosition.coords.longitude + "&lat="+ oPosition.coords.latitude,
