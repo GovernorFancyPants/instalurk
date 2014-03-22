@@ -7,10 +7,14 @@
 <script id="image-template" type="text/x-handlebars-template">
     <div class="image-container">
         <p> {{user.username}} <img src={{user.profile_picture}} height=20></p>
+        <p>
+            {{timeago created_time}}
+        </p>
         <img src={{images.standard_resolution.url}}>
         <p>
             likes: {{likes.count}}
             comments: {{comments.count}}
+
             {{#if tags}}
                 tags:
                 {{#each tags}}
@@ -28,7 +32,9 @@
             <p>
                 {{user.username}} <img src={{user.profile_picture}}>
             </p>
-
+            <p>
+                {{timeago created_time}}
+            </p>
             likes: {{likes.count}}
             comments: {{comments.count}}
             {{#if tags}}
@@ -55,7 +61,7 @@
 
 <script type="text/javascript">
     Handlebars.registerHelper('timeago', function(timestamp) {
-      return moment.unix(timestamp).startOf('hour').fromNow();
+      return moment.unix(timestamp).startOf('second').fromNow();
     });
     $("#feed-container").html("LOADING...");
     navigator.geolocation.getCurrentPosition(loadPosition)
