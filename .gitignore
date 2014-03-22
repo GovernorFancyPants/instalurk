@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+Gemfile.lock
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -14,5 +15,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/node_modules
+node_modules
 .sass-cache

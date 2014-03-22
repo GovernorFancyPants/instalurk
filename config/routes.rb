@@ -9,6 +9,13 @@ Instalurk::Application.routes.draw do
     end
   end
 
+  namespace :api do
+    resources :api
+    controller :api do
+      get 'get_location_ids'  => :get_location_ids
+    end
+  end
+
   # get "main/index"
   # get "splash/index"
   # The priority is based upon order of creation: first created -> highest priority.
