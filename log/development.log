@@ -9908,3 +9908,44 @@ Processing by Api::ApiController#get_location_ids as JSON
   Parameters: {"long"=>"18.064910000000054", "lat"=>"59.32893000000001"}
 Geokit is using the domain: localhost
 Completed 200 OK in 1009ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main" for 127.0.0.1 at 2014-03-23 00:02:13 +0100
+Processing by MainController#index as HTML
+Geokit is using the domain: localhost
+  Rendered main/index.html.erb within layouts/application (1010.1ms)
+Completed 200 OK in 2086ms (Views: 1014.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/moment-with-langs.min.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/splash.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+
+
+Started GET "/api/get_location_ids.json?long=18.064910000000054&lat=59.32893000000001" for 127.0.0.1 at 2014-03-23 00:02:16 +0100
+Processing by Api::ApiController#get_location_ids as JSON
+  Parameters: {"long"=>"18.064910000000054", "lat"=>"59.32893000000001"}
+Geokit is using the domain: localhost
+Completed 200 OK in 1009ms (Views: 82.4ms | ActiveRecord: 0.0ms)
