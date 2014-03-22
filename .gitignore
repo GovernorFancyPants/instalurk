@@ -15,6 +15,5 @@ Gemfile.lock
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/node_modules
+node_modules
 .sass-cache
-Gemfile.lock
