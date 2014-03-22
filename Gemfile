@@ -11,7 +11,9 @@ gem 'instagram'
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.0'
-# gem 'susy', '>= 2.0'
+gem 'susy', '>= 2.1.1'
+gem 'compass', '>= 1.0.0.alpha.19'
+gem 'sass', '>= 3.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
