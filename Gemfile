@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 gem 'thin'
-gem 'oauth2'
+gem 'instagram'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
