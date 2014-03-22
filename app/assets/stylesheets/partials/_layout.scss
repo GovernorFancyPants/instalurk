@@ -1,5 +1,16 @@
-body {
-    background-color: $light-gray;
-    color: $dark;
-    font-family: 'proxima-nova', helvetica, arial;
+$susy: (
+    columns: 12,
+    gutters: 1/4,
+    math: fluid,
+    output: float,
+    gutter-position: split,
+);
+
+.page {
+    @include container(80%);
+    background-color: #f2f2f2;
+}
+
+.balls {
+    @include span(12);
 }
