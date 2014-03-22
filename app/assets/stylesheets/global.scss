@@ -14,6 +14,9 @@
 
 @import "susy";
 
+@import "vendor/normalize";
+
 @import "modules/variables";
 
 @import "partials/layout";
+@import "partials/globals";
