@@ -16,3 +16,4 @@
 /tmp
 /node_modules
 .sass-cache
+Gemfile.lock

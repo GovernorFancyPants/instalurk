@@ -1,5 +1,78 @@
-<h1><%= @client.user.username %>'s recent photos</h1>
-<% @client.user_recent_media.each do |instagram| %>
-    <%= image_tag instagram.images.standard_resolution.url %>
-<% end %>
+<h1>
+    Howdy, <%= @client.user.username %>
+    <%= image_tag @client.user.profile_picture %>
+</h1>
+<div id="feed-container"></div>
 
+<script id="image-template" type="text/x-handlebars-template">
+    <div class="image-container">
+        <p> {{user.username}} <img src={{user.profile_picture}} height=20></p>
+        <img src={{images.standard_resolution.url}}>
+        <p>
+            likes: {{likes.count}}
+            comments: {{comments.count}}
+            {{#if tags}}
+                tags:
+                {{#each tags}}
+                  #{{this}}
+                {{/each}}
+            {{/if}}    
+        </p>
+    </div>
+</script>
+
+<script id="image-detail-template" type="text/x-handlebars-template">
+    <div class="image-detail-container">
+        <img src={{images.standard_resolution.url}}>
+        <p>
+            <p>
+                {{user.username}} <img src={{user.profile_picture}}>
+            </p>
+
+            likes: {{likes.count}}
+            comments: {{comments.count}}
+            {{#if tags}}
+                tags:
+                {{#each tags}}
+                  #{{this}}
+                {{/each}}
+            {{/if}}
+
+            {{#if comments.data}}
+                tags
+                {{#each comments.data}}
+                    <p class="comment">
+                    {{timeago this.created_time}}
+                    <p>{{this.text}}</p>
+                    </p>
+                {{/each}}
+            {{else}}
+                <p class="no-comment">no comments</p>
+            {{/if}} 
+        </p>
+    </div>
+</script>
+
+<script type="text/javascript">
+    Handlebars.registerHelper('timeago', function(timestamp) {
+      return moment.unix(timestamp).startOf('hour').fromNow();
+    });
+    $("#feed-container").html("LOADING...");
+    navigator.geolocation.getCurrentPosition(loadPosition)
+    function loadPosition(oPosition) {
+        $.ajax({
+          type: "GET",
+          url: "/api/get_location_ids.json?long="+oPosition.coords.longitude + "&lat="+ oPosition.coords.latitude,
+          success:function(oResult){
+            $("#feed-container").html("");
+            for (var i = 0; i < oResult.length; i++) {
+                var oImage = oResult[i];
+                var source   = $("#image-template").html();
+                var template = Handlebars.compile(source);
+                var html    = template(oImage);
+                $("#feed-container").append(html);
+            };
+          }
+        })
+    }
+</script>
