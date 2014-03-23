@@ -8,7 +8,7 @@ gem 'sqlite3'
 
 gem 'thin'
 gem 'instagram'
-gem 'geokit-rails'
+gem 'rest-client'
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.0'

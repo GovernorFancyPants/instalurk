@@ -6,6 +6,7 @@ Instalurk::Application.routes.draw do
     controller :oauth do
       get 'connect'  => :connect
       get 'callback' => :callback
+      get 'logout' => :logout
     end
   end
 
