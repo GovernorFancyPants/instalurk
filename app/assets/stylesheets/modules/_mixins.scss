@@ -1,0 +1,27 @@
+// ==========================================================================
+//   Mixins
+// ==========================================================================
+
+// Clearfix
+//============================
+@mixin clearfix {
+    *zoom: 1;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+// Transitions
+//============================
+@mixin link-transition {
+    transition: color 200ms linear;
+}
+@mixin bg-transition {
+    transition: background-color 200ms linear;
+}

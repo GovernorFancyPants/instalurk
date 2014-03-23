@@ -17,11 +17,11 @@
 @import "vendor/normalize";
 
 @import "modules/variables";
+@import "modules/mixins";
 
 @import "partials/layout";
-
 @import "partials/globals";
-
+@import "partials/typography";
 @import "partials/header";
 
 @import "partials/icon-font";
