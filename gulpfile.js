@@ -49,7 +49,7 @@ gulp.task('sass', function() {
             css: 'app/assets/stylesheets',
             sass: 'app/assets/stylesheets',
             //image: 'img',
-            require: ['susy']
+            require: ['susy', 'breakpoint']
         }))
         .pipe(plumber())                                // make sure gulp keeps running on errors
         .pipe(sass())                                   // compile all sass

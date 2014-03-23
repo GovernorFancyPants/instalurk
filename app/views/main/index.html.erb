@@ -6,7 +6,7 @@
 </h1>
 <div id="feed-container"></div>
 <style type="text/css">
-    
+
     .emoji {
         width: 1.5em;
         height: 1.5em;
@@ -15,20 +15,26 @@
 
 <script id="image-template" type="text/x-handlebars-template">
     <div class="image-container">
-        <div class="metadata">
-            <img class="avatar" src={{user.profile_picture}} width=80>
-            <p class="name"> {{user.username}} </p>
-            <p class="time"> {{timeago created_time}} </p>
+        <div class="user-metadata">
+            <div class="avatar">
+                <img src={{user.profile_picture}} width=80>
+            </div>
+            <div class="info">
+                <p class="name"> {{user.username}} </p>
+                <p class="time"> {{timeago created_time}} </p>
+            </div>
             <p>from you {{distance location}}</p>
         </div>
         <img src={{images.standard_resolution.url}}>
-        <p>
-            <span class="icon-heart"> {{likes.count}}
-            comments: {{comments.count}}
-        </p>
-        <p>
-            {{{caption.text}}}
-        </p>
+        <div class="image-metadata">
+            <div class="buzz">
+                <span class="icon-heart"> {{likes.count}}
+                <span class="icon-bubble"> {{comments.count}}
+            </div>
+            <div class="caption">
+                <p>{{{caption.text}}}</p>
+            </div>
+        </div>
     </div>
 </script>
 
