@@ -3,5 +3,29 @@
 // ==========================================================================
 
 .header-wrapper {
+    @include clearfix;
     background-color: $primary-color;
+    color: #fff;
+    padding: 0 $gen-padding;
+    p {
+        margin-bottom: 0;
+    }
+    .logo-name {
+        text-transform: uppercase;
+        letter-spacing: 0.07rem;
+        font-weight: 400;
+        float: left;
+        padding: $small-padding 0;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: $small-padding;
+        float: right;
+        @include link-transition;
+        &:hover {
+           color: #e8d6ef
+        }
+    }
 }
