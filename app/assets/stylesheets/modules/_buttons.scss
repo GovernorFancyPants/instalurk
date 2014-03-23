@@ -2,9 +2,11 @@
 //   Buttons
 // ==========================================================================
 
+$login-button: #2A9DBB;
+
 .login-button {
     padding: $gen-padding;
-    background-color: #DC5799;
+    background-color: $login-button;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -13,7 +15,7 @@
     border-radius: 4px;
     @include bg-transition;
     &:hover {
-        background-color: lighten(#DC5799, 5);
+        background-color: lighten($login-button, 5);
         color: #fff;
     }
 }
