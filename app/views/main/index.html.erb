@@ -20,12 +20,12 @@
                 <p class="time"> {{timeago created_time}} </p>
             </div>
         </div>
-        <div class="location">{{distance location}} from you</div>
+        <div class="location"><span class="icon-location"></span> {{distance location}}</div>
         <img src={{images.standard_resolution.url}}>
         <div class="image-metadata">
             <div class="buzz">
-                <span class="icon-heart"> {{likes.count}}</span>
-                <span class="icon-bubble"> {{comments.count}}</span>
+                <span class="icon-heart"><span> {{likes.count}}</span></span>
+                <span class="icon-bubble"><span> {{comments.count}}</span></span>
             </div>
             <div class="caption">
                 <p>{{{caption.text}}}</p>
@@ -68,8 +68,8 @@
     });
     Handlebars.registerHelper('distance', function(coordinates) {
         if(coordinates !== null){
-            var name =  coordinates.name !== undefined ? "(" + coordinates.name + ")" : ''
-            return distance(coordinates.latitude, coordinates.longitude, latitude, longitude, 'K').toFixed(1) + " Km" + name;
+            var name =  coordinates.name !== undefined ? coordinates.name + ", " : ''
+            return name + distance(coordinates.latitude, coordinates.longitude, latitude, longitude, 'K').toFixed(1) + " km";
         } else {
             return "unknown"
         }

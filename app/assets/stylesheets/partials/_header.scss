@@ -8,6 +8,7 @@
     background-color: $primary-color;
     color: #fff;
     padding: 0 $gen-padding;
+    // border-bottom: 1px solid darken($primary-color, 20);
     p {
         margin-bottom: 0;
     }
@@ -51,6 +52,7 @@
         //padding: 6px 0 8px 0;
         img {
             max-height: 24px;
+            border-radius: 100%;
         }
         span {
             margin-right: $gen-padding;
