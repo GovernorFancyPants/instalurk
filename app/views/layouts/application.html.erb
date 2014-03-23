@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Instalurk</title>
-  <%= stylesheet_link_tag "global" %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <script type="text/javascript" src="http://use.typekit.net/vbg8wia.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-</head>
-<body>
+    <%= render "layouts/header" %>
+
     <div class="page">
         <%= yield %>
     </div>
+
 </body>
 </html>

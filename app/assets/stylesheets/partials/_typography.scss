@@ -1,0 +1,21 @@
+// ==========================================================================
+//   Header
+// ==========================================================================
+
+$copy-font-family: 'proxima-nova', helvetica, arial, sans-serif;
+$heading-font-family: 'proxima-nova', helvetica, arial, sans-serif;
+
+$copy-font-weight: 300;
+$heading-font-weight: 600;
+
+body {
+    background-color: $light-gray;
+    color: $dark;
+    font-family: $copy-font-family;
+    font-style: normal;
+    font-weight: $copy-font-weight;
+}
+
+p {
+    margin-top: 0;
+}
