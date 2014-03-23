@@ -11,6 +11,6 @@ $susy: (
     background-color: #f2f2f2;
 }
 
-.balls {
-    @include span(12);
+.image-container {
+    @include span(4);
 }
