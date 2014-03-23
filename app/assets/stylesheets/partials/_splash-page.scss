@@ -1,0 +1,21 @@
+// ==========================================================================
+//   Splash Page
+// ==========================================================================
+
+.splash-top-wrapper {
+    background-color: $primary-color;
+    text-align: center;
+    padding: 0 0 3rem 0;
+    h1 {
+        font-size: 3rem;
+        color: #fff;
+    }
+}
+
+.splash-description {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 5rem;
+    color: #fff;
+    padding-bottom: 2em;
+}
