@@ -1,4 +1,6 @@
 require "instagram"
+require 'rest_client'
+
 
 class Oauth::OauthController < ApplicationController
     
@@ -12,6 +14,11 @@ class Oauth::OauthController < ApplicationController
         response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
         session[:access_token] = response.access_token
         redirect_to "/main"
+    end
+
+    def logout
+        session.clear
+        redirect_to "/?logout=1"
     end
 
 end
