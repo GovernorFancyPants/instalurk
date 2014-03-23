@@ -3,6 +3,13 @@
     <%= image_tag @client.user.profile_picture %>
 </h1>
 <div id="feed-container"></div>
+<style type="text/css">
+    
+    .emoji {
+        width: 1.5em;
+        height: 1.5em;
+    }
+</style>
 
 <script id="image-template" type="text/x-handlebars-template">
     <div class="image-container">
@@ -23,6 +30,9 @@
                   #{{this}}
                 {{/each}}
             {{/if}}
+        </p>
+        <p>
+            {{{caption.text}}}
         </p>
     </div>
 </script>
@@ -74,6 +84,9 @@
             return "unknown"
         }
     });
+    emojify.setConfig({
+        img_dir          : '/assets/emoji'
+    });
 
     $("#feed-container").html("LOADING...");
     navigator.geolocation.getCurrentPosition(loadPosition)
@@ -104,11 +117,16 @@
             $("#feed-container").html("");
             for (var i = 0; i < oResult.length; i++) {
                 var oImage = oResult[i];
+                oImage.caption.text = emoji.replace_unified(oImage.caption.text);
                 var source   = $("#image-template").html();
                 var template = Handlebars.compile(source);
                 var html    = template(oImage);
                 $("#feed-container").append(html);
+                 emojify.run();
             };
+          },
+          done: function(){
+
           }
         })
     }
