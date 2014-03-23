@@ -17,3 +17,4 @@ Gemfile.lock
 tmp
 node_modules
 .sass-cache
+*.css
