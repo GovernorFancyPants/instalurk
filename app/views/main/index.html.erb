@@ -105,7 +105,8 @@
             $("#feed-container").html("");
             for (var i = 0; i < oResult.length; i++) {
                 var oImage = oResult[i];
-                oImage.caption.text = emoji.replace_unified(oImage.caption.text);
+                if(oImage.caption)
+                    oImage.caption.text = emoji.replace_unified(oImage.caption.text);
                 var source   = $("#image-template").html();
                 var template = Handlebars.compile(source);
                 var html    = template(oImage);
