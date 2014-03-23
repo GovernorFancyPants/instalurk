@@ -1061,10 +1061,26 @@ footer {
     span {
         color: #999;
     }
+    @include breakpoint($medium-columns) {
+        color: #ddd;
+        span {
+            color: #fff;
+        }
+    }
 }
 
 html, body {
     height: 100%;
+}
+
+body {
+    @include breakpoint($medium-columns) {
+        background: url(/assets/instalurk_party_bus.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 }
 
 .emoji {
