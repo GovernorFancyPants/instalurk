@@ -1,3 +1,6 @@
+$medium-columns: 40rem;
+$large-columns: 65rem;
+
 $susy: (
     columns: 12,
     gutters: 1/4,
@@ -8,9 +11,15 @@ $susy: (
 
 .page {
     @include container(80%);
-    //background-color: #f2f2f2;
 }
 
 .image-container {
-    @include span(4);
+    @include span(12);
+    margin-bottom: 1em;
+    @include breakpoint($medium-columns) {
+        @include span(6);
+    }
+    @include breakpoint($large-columns) {
+        @include span(4);
+    }
 }
