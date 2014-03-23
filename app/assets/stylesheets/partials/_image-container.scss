@@ -43,8 +43,10 @@
             margin: 0.5rem 0;
         }
         .caption {
-            @include ellipsed-end;
-            word-break: break-word;
+            p {
+                @include ellipsed-end;
+                word-break: break-word;
+            }
             p:before {
             content: ".";
             color: transparent;
