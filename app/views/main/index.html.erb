@@ -25,13 +25,6 @@
         <p>
             <span class="icon-heart"> {{likes.count}}
             comments: {{comments.count}}
-
-            {{#if tags}}
-                tags:
-                {{#each tags}}
-                  #{{this}}
-                {{/each}}
-            {{/if}}
         </p>
         <p>
             {{{caption.text}}}
@@ -51,13 +44,6 @@
             </p>
             likes: {{likes.count}}
             comments: {{comments.count}}
-            {{#if tags}}
-                tags:
-                {{#each tags}}
-                  #{{this}}
-                {{/each}}
-            {{/if}}
-
             {{#if comments.data}}
                 tags
                 {{#each comments.data}}
