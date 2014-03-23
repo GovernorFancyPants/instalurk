@@ -11,7 +11,7 @@
             img {
                 width: 40px;
                 height: 40px;
-                border-radius: 3px;
+                border-radius: 100%;
             }
         }
         .info {
@@ -32,8 +32,12 @@
         padding: .5em;
         margin: .5em 0;
         border-radius: 2px;
-        background-color: darken($light-gray, 5);
-        font-weight: bold;
+        background-color: #f5f5f5;
+        border: 1px solid #efefef;
+        font-weight: 100;
+        span {
+            color: #2A9DBB;
+        }
     }
     img {
         border-radius: 3px;
@@ -41,6 +45,14 @@
     .image-metadata {
         .buzz {
             margin: 0.5rem 0;
+            [class^="icon-"] {
+                color: #ddd;
+                    span {
+                        color: #666;
+                        font-weight: 100;
+                        margin-right: 0.5rem;
+                    }
+            }
         }
         .caption {
             p {

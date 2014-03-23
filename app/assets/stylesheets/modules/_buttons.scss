@@ -5,13 +5,13 @@
 $login-button: #2A9DBB;
 
 .login-button {
-    padding: $gen-padding;
+    padding: 1.2rem;
     background-color: $login-button;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.9rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.12rem;
     border-radius: 4px;
     @include bg-transition;
     &:hover {
