@@ -2,6 +2,8 @@
     background: #fff;
     padding: 1em;
     border-radius: 3px;
+    opacity: 0;
+    animation: opacity 0.3s normal forwards ease-in-out;
     .user-metadata {
         color: $dark;
         .avatar {
@@ -29,5 +31,14 @@
         border-radius: 3px;
     }
     .image-metadata {
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0
+    }
+    100%  {
+        opacity: 1;
     }
 }
