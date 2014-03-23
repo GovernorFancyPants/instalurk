@@ -4,9 +4,14 @@
 
 $copy-font-family: 'proxima-nova', helvetica, arial, sans-serif;
 $heading-font-family: 'proxima-nova', helvetica, arial, sans-serif;
+$main-font-size: 0.9rem;
 
 $copy-font-weight: 300;
 $heading-font-weight: 600;
+
+html {
+    font-size: $main-font-size;
+}
 
 body {
     background-color: $light-gray;

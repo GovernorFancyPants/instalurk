@@ -1,6 +1,10 @@
 <!-- Header navbar start -->
 <div class="header-wrapper">
     <span class="logo-name">Instalurk</span>
-    <a href="#">Settings</a>
-    <a href="#">Balls</a>
+    <div class="header-avatar-container">
+        <span><%= @client.user.username %></span><%= image_tag @client.user.profile_picture %>
+    </div>
+    <div class="header-nav-container">
+        <a href="#">Settings</a>
+    </div>
 </div>

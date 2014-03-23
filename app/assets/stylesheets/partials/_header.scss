@@ -4,6 +4,7 @@
 
 .header-wrapper {
     @include clearfix;
+    height: 45px;
     background-color: $primary-color;
     color: #fff;
     padding: 0 $gen-padding;
@@ -11,21 +12,50 @@
         margin-bottom: 0;
     }
     .logo-name {
+        font-style: normal;
+        font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.07rem;
-        font-weight: 400;
         float: left;
-        padding: $small-padding 0;
-    }
-    a {
-        color: #fff;
-        text-decoration: none;
         display: inline-block;
-        padding: $small-padding;
+        height: 45px;
+        line-height: 45px;
+        //padding: $small-padding 0;
+    }
+    .header-nav-container {
         float: right;
-        @include link-transition;
-        &:hover {
-           color: #e8d6ef
+        margin-right: 2em;
+        a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            height: 45px;
+            line-height: 45px;
+            //padding-right: $gen-padding;
+            //text-transform: uppercase;
+            //font-size: 90%;
+            //letter-spacing: 0.1rem;
+            @include link-transition;
+            &:hover {
+               color: #e8d6ef
+            }
+        }
+    }
+    .header-avatar-container {
+        @include clearfix;
+        float: right;
+        height: 45px;
+        line-height: 45px;
+        border-left: 1px solid #a45bc0;
+        //padding: $small-padding;
+        //padding: 6px 0 8px 0;
+        img {
+            max-height: 24px;
+        }
+        span {
+            margin-right: $gen-padding;
+            // margin-left: 2rem;
+            padding-left: 2rem;
         }
     }
 }
