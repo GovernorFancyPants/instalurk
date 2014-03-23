@@ -27,10 +27,29 @@
             color: lighten($dark, 15);
         }
     }
+    .location {
+        @include ellipsed-end;
+        padding: .5em;
+        margin: .5em 0;
+        border-radius: 2px;
+        background-color: darken($light-gray, 5);
+        font-weight: bold;
+    }
     img {
         border-radius: 3px;
     }
     .image-metadata {
+        .buzz {
+            margin: 0.5rem 0;
+        }
+        .caption {
+            @include ellipsed-end;
+            word-break: break-word;
+            p:before {
+            content: ".";
+            color: transparent;
+            }
+        }
     }
 }
 

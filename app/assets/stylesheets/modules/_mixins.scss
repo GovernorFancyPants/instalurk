@@ -25,3 +25,11 @@
 @mixin bg-transition {
     transition: background-color 200ms linear;
 }
+
+// Helpers
+//============================
+@mixin ellipsed-end {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

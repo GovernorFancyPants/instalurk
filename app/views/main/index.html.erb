@@ -7,10 +7,6 @@
 <div id="feed-container"></div>
 <style type="text/css">
 
-    .emoji {
-        width: 1.5em;
-        height: 1.5em;
-    }
 </style>
 
 <script id="image-template" type="text/x-handlebars-template">
@@ -23,13 +19,13 @@
                 <p class="name"> {{user.username}} </p>
                 <p class="time"> {{timeago created_time}} </p>
             </div>
-            <p>from you {{distance location}}</p>
         </div>
+        <div class="location">{{distance location}} from you</div>
         <img src={{images.standard_resolution.url}}>
         <div class="image-metadata">
             <div class="buzz">
-                <span class="icon-heart"> {{likes.count}}
-                <span class="icon-bubble"> {{comments.count}}
+                <span class="icon-heart"> {{likes.count}}</span>
+                <span class="icon-bubble"> {{comments.count}}</span>
             </div>
             <div class="caption">
                 <p>{{{caption.text}}}</p>
