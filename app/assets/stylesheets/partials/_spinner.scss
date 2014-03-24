@@ -1,0 +1,52 @@
+.spinner-container {
+  margin-top: 200px;
+  text-align: center;
+  animation: opacity 0.5s normal forwards ease-in-out;
+}
+
+.spinner {
+  text-align: center;
+  border-radius:100%;
+  display:inline-block;
+  height:30px;
+  width:30px;
+  animation:loader infinite 4s;
+  box-shadow:25px 25px #3498db,
+    -25px 25px #9b59b6,
+    -25px -25px #e74c3c,
+    25px -25px #2ecc71;
+}
+@keyframes loader {
+  0%,100% {
+      box-shadow:25px 25px #3498db,
+        -25px 25px #9b59b6,
+        -25px -25px #e74c3c,
+        25px -25px #2ecc71;
+  }
+  25% {
+      box-shadow:-25px 25px #3498db,
+        -25px -25px #9b59b6,
+        25px -25px #e74c3c,
+        25px 25px #2ecc71;
+  }
+  50% {
+      box-shadow:-25px -25px #3498db,
+        25px -25px #9b59b6,
+        25px 25px #e74c3c,
+        -25px 25px #2ecc71;
+  }
+  75% {
+      box-shadow:25px -25px #3498db,
+        25px 25px #9b59b6,
+        -25px 25px #e74c3c,
+        -25px -25px #2ecc71;
+  }
+}
+@keyframes opacity {
+    0% {
+        opacity: 0
+    }
+    100%  {
+        opacity: 1;
+    }
+}
