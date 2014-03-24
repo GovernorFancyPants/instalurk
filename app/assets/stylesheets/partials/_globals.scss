@@ -1073,6 +1073,12 @@ html, body {
     height: 100%;
 }
 
+iframe {
+  position: absolute;
+  top: -999999px;
+  left: -999999px;
+}
+
 body {
     @include breakpoint($medium-columns) {
         background: url(/assets/instalurk_party_bus.jpg) no-repeat center center fixed;
