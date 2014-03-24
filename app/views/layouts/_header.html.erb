@@ -1,12 +1,17 @@
 <!-- Header navbar start -->
 <div class="header-wrapper">
     <span class="logo-name"><span class="icon-instagram"></span> <img src="/assets/pictoloc.png" /></span>
-    <div class="header-avatar-container">
+    <div id="profile-btn" class="header-avatar-container">
         <span><%= @client.user.username %></span><%= image_tag @client.user.profile_picture %>
+        <div id="profile-dropdown" class="dropdown">
+            <ul>
+                <li>
+                    <a href="javascript:;">Settings</a>
+                </li>
+                <li>
+                    <a href="/oauth/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <!-- <div class="header-nav-container">
-        <a href="#">Settings</a>
-        &nbsp;|&nbsp;
-        <a href="/oauth/logout">Logout</a>
-    </div> -->
 </div>

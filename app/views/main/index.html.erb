@@ -21,7 +21,7 @@
                 <img src={{user.profile_picture}} width=80>
             </div>
             <div class="info">
-                <p class="name"> {{user.username}} </p>
+                <a href="http://instagram.com/{{user.username}}" class="name"> {{user.username}} </a>
                 <p class="time"> {{timeago created_time}} </p>
             </div>
         </div>
@@ -125,6 +125,18 @@
           }
         })
     }
+    var profileBtn = document.getElementById("profile-btn");
+    var dropdown = document.getElementById("profile-dropdown");
+    profileBtn.addEventListener("click", function() {
+        if (dropdown.style.visibility == "visible") {
+            dropdown.style.visibility = "hidden";
+            dropdown.style.opacity = "0";
+        } else {
+            dropdown.style.visibility = "visible";
+            dropdown.style.opacity = "1";
+        }
+    });
+
 </script>
 
 </div><!-- page/gridcontainer -->

@@ -44,12 +44,14 @@
     }
     .header-avatar-container {
         @include clearfix;
+        position: relative;
         float: right;
         height: 45px;
         line-height: 45px;
         //border-left: 1px solid #a45bc0;
-        //padding: $small-padding;
+        padding: 0 $gen-padding;
         //padding: 6px 0 8px 0;
+        cursor: pointer;
         img {
             max-height: 24px;
             border-radius: 100%;
@@ -58,6 +60,38 @@
             margin-right: $gen-padding;
             // margin-left: 2rem;
             padding-left: 2rem;
+        }
+        .dropdown {
+            position: absolute;
+            min-width: 200px;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            line-height: 1.4;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            &:before {
+                content: "";
+                position: absolute;
+                border-bottom: 7px solid #fff;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                top: -7px;
+                left: calc(50% - 3px);
+            }
+            ul {
+                list-style-type: none;
+                padding: $small-padding 0;
+                margin: 0;
+            }
+            li a {
+                display: block;
+                padding: $small-padding $gen-padding;
+                &:hover {
+                    background-color: #f3f3f3;
+                }
+            }
         }
     }
     @include breakpoint($medium-columns) {

@@ -5,20 +5,20 @@
 .splash-cover-image {
     height: 100%;
     background: url(/assets/instalurk_party_bus.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 .splash-welcome-container {
-    transform: translateY(50%);
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
     background-color: rgba(157, 79, 187, 0.85);
     text-align: center;
     padding: 0 0 3rem 0;
     font-weight: 100;
     line-height: 1.7;
     h1 {
+        display: inline-block;
         font-size: 3rem;
         color: #fff;
     }
