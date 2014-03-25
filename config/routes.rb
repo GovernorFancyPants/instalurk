@@ -14,6 +14,7 @@ Instalurk::Application.routes.draw do
     resources :api
     controller :api do
       get 'get_location_ids'  => :get_location_ids
+      get 'twitter'  => :twitter
     end
   end
 
