@@ -1,5 +1,5 @@
 require "instagram"
-require 'rest_client'
+require 'oauth'
 
 
 class Oauth::OauthController < ApplicationController
