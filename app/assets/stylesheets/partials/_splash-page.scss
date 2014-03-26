@@ -2,13 +2,8 @@
 //   Splash Page
 // ==========================================================================
 
-.splash-cover-image {
-    height: 100%;
-    background: url(/assets/instalurk_party_bus.jpg) no-repeat center center fixed;
-    background-size: cover;
-}
-
 .splash-welcome-container {
+    @include clearfix;
     top: 50%;
     position: relative;
     transform: translateY(-50%);
