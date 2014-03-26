@@ -175,7 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  breakpoint
+  breakpoint (~> 2.4.2)
   capistrano (~> 2.15.0)
   coffee-rails (~> 4.0.0)
   compass (>= 1.0.0.alpha.19)

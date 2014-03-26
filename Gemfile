@@ -15,7 +15,7 @@ gem 'oauth'
 gem 'susy', '>= 2.1.1'
 gem 'compass', '>= 1.0.0.alpha.19'
 gem 'sass', '>= 3.3'
-gem 'breakpoint'
+gem 'breakpoint', '~> 2.4.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
