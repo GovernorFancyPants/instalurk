@@ -8,7 +8,7 @@ set :password, "Gurka1234"
 
 set :scm, :git
 set :repository, "git@github.com:GovernorFancyPants/instalurk.git"
-set :branch, "master"
+set :branch, "dev"
 set :use_sudo, true
 
 server "lurk.cloudapp.net", :web, :app, :db, primary: true
