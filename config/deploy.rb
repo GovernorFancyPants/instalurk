@@ -11,7 +11,7 @@ set :repository, "git@github.com:GovernorFancyPants/instalurk.git"
 set :branch, "dev"
 set :use_sudo, true
 
-server "lurk.cloudapp.net", :web, :app, :db, primary: true
+server "superultra.cloudapp.net", :web, :app, :db, primary: true
 
 set :deploy_to, "/home/#{user}/apps/#{application}"
 default_run_options[:pty] = true
