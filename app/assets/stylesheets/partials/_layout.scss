@@ -1,5 +1,6 @@
 $medium-columns: 40rem;
 $large-columns: 65rem;
+$mcdonalds-columns: 80em;
 
 $susy: (
     columns: 12,
@@ -9,8 +10,29 @@ $susy: (
     gutter-position: split,
 );
 
+$anchor: 1;
+$side: 12 - $anchor;
+
+.site-wrapper {
+    @include container;
+}
+
 .page {
-    @include container(80%);
+    @include span(12);
+    margin-right: -100%;
+}
+
+.settings-area {
+    @include span($side);
+    margin-left: -100%;
+    background: #f3f3f3;
+    .settings-area-active & {
+        margin-left: 0;
+    }
+}
+
+#feed-container {
+    @include container;
 }
 
 .image-container {
@@ -21,5 +43,8 @@ $susy: (
     }
     @include breakpoint($large-columns) {
         @include span(4);
+    }
+    @include breakpoint($mcdonalds-columns) {
+        @include span(3);
     }
 }

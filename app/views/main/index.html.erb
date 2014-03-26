@@ -1,17 +1,19 @@
 <%= render "layouts/header" %>
-<div class="page">
-<h1 class="main-greeting">
-    Howdy, <span><%= @client.user.username %></span>
-    <!-- <%= image_tag @client.user.profile_picture %> -->
-</h1>
-<div id="feed-container">
-    <div class="spinner-container">
-        <div class="spinner"></div>
+<div class="site-wrapper">
+    <div class="settings-area">
+        <h4>My settings</h4>
+    </div>
+    <div class="page">
+    <h1 class="main-greeting">
+        Howdy, <span><%= @client.user.username %></span>
+        <!-- <%= image_tag @client.user.profile_picture %> -->
+    </h1>
+    <div id="feed-container">
+        <div class="spinner-container">
+            <div class="spinner"></div>
+        </div>
     </div>
 </div>
-<style type="text/css">
-
-</style>
 
 <script id="image-template" type="text/x-handlebars-template">
     <div class="image-container">

@@ -5,34 +5,27 @@
 .header-wrapper {
     @include clearfix;
     height: 45px;
-    background-color: $primary-color;
+    background-color: rgba(157, 79, 187, 0.85);
     color: #fff;
     padding: 0 $gen-padding;
-    // border-bottom: 1px solid darken($primary-color, 20);
     p {
         margin-bottom: 0;
     }
-    .logo-name {
-        font-style: normal;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.07rem;
-        float: left;
+    .settings-btn {
+        position: absolute;
+        padding: 10px;
+        left: 0;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .icon-pictoloc_org {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 52px;
+        height: 25px;
         display: inline-block;
-        height: 45px;
-        line-height: 45px;
-        //padding: $small-padding 0;
-        .icon-pictoloc_org {
-            width: 200px;
-            height: 30px;
-            display: inline-block;
-            margin: 7px 0;
-        }
-        // .icon {
-        //     position: absolute;
-        //     top: 12px;
-        //     font-size: 20px;
-        // }
+        margin: 10px 0;
     }
     .header-nav-container {
         float: right;
@@ -60,7 +53,7 @@
         height: 45px;
         line-height: 45px;
         //border-left: 1px solid #a45bc0;
-        padding: 0 $gen-padding;
+        padding: 0 0 0 $gen-padding;
         //padding: 6px 0 8px 0;
         cursor: pointer;
         img {
@@ -71,6 +64,7 @@
             margin-right: $gen-padding;
             // margin-left: 2rem;
             padding-left: 2rem;
+            display: none;
         }
         .dropdown {
             position: absolute;
@@ -106,6 +100,8 @@
         }
     }
     @include breakpoint($medium-columns) {
-        background-color: rgba(157, 79, 187, 0.85);
+        .header-avatar-container span {
+            display: inline-block;
+        }
     }
 }
