@@ -40,6 +40,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'unicorn'
+gem "capistrano", "~> 2.15.0"
+gem 'rvm-capistrano'
+gem 'net-ssh', '2.7.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
