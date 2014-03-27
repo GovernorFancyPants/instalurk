@@ -1,9 +1,8 @@
 <%= render "layouts/header" %>
-<div class="site-wrapper">
-    <div class="settings-area">
-        <h4>My settings</h4>
-    </div>
-    <div class="page">
+<div class="settings-area">
+    <h3>My settings</h3>
+</div>
+<div class="page">
     <h1 class="main-greeting">
         Howdy, <span><%= @client.user.username %></span>
         <!-- <%= image_tag @client.user.profile_picture %> -->
@@ -93,7 +92,7 @@
 
 <script type="text/javascript">
     var longitude = 0, latitude = 0;
-    
+
     Handlebars.registerHelper('timeago', function(timestamp) {
       return moment.unix(timestamp).startOf('second').fromNow();
     });
@@ -101,7 +100,7 @@
     Handlebars.registerHelper('distance', function(coordinates) {
         console.log(coordinates);
         if( Object.prototype.toString.call( coordinates ) === '[object Array]' ) {
-            alert( 'Array!' );
+            //alert( 'Array!' );
         }
         else if(coordinates !== null){
             var name =  coordinates.name !== undefined ? coordinates.name + ", " : ''
@@ -171,6 +170,21 @@
             dropdown.style.opacity = "1";
         }
     });
+
+    var settingsBtn = document.getElementById("settings-btn");
+    settingsBtn.addEventListener("click", function() {
+        if (document.body.classList.contains("settings-area-active")) {
+            document.body.classList.remove("settings-area-active");
+            document.children[0].style.overflow = 'auto';
+        } else {
+            document.body.classList.add("settings-area-active");
+            document.children[0].style.overflow = 'hidden';
+        }
+    });
+
+    function hasClass(element, cls) {
+        return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }
 
 </script>
 
