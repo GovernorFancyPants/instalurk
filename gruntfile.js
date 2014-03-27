@@ -103,6 +103,27 @@ module.exports = function(grunt) {
             // }
         },
 
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : 'app/assets/stylesheets/*.css'
+                },
+                options: {
+                    watchTask: true,
+                    proxy: {
+                        host: 'localhost',
+                        port: '3000'
+                    },
+                    ghostMode: {
+                        clicks: true,
+                        scroll: true,
+                        links: true,
+                        forms: true
+                    }
+                }
+            }
+        },
+
         connect: {
             server: {
                 options: {

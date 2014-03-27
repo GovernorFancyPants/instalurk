@@ -4,6 +4,7 @@
 
 .header-wrapper {
     @include clearfix;
+    position: relative;
     height: 45px;
     background-color: rgba(157, 79, 187, 0.85);
     color: #fff;
@@ -71,30 +72,37 @@
             min-width: 200px;
             top: 100%;
             right: 0;
-            background-color: #fff;
+            background-color: rgba(157, 79, 187, 0.85);
             line-height: 1.4;
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.3s ease;
+            border-top: 2px solid #fff;
+            z-index: 100;
             &:before {
                 content: "";
                 position: absolute;
                 border-bottom: 7px solid #fff;
                 border-left: 7px solid transparent;
                 border-right: 7px solid transparent;
-                top: -7px;
-                left: calc(50% - 3px);
+                top: -8px;
+                right: 7px;
+                @include breakpoint($medium-columns) {
+                    right: auto;
+                    left: calc(50% - 3px);
+                }
             }
             ul {
                 list-style-type: none;
-                padding: $small-padding 0;
+                padding: $gen-padding 0;
                 margin: 0;
             }
             li a {
                 display: block;
                 padding: $small-padding $gen-padding;
+                color: #fff;
                 &:hover {
-                    background-color: #f3f3f3;
+                    background-color: rgba(157, 79, 187, 1);
                 }
             }
         }

@@ -13,10 +13,6 @@ $susy: (
 $anchor: 1;
 $side: 12 - $anchor;
 
-.site-wrapper {
-    @include container;
-}
-
 .page {
     @include span(12);
     margin-right: -100%;
@@ -24,10 +20,20 @@ $side: 12 - $anchor;
 
 .settings-area {
     @include span($side);
+    background-color: darken($primary-color, 20);
+    color: #fff;
+    box-shadow: inset -2px 0 10px darken($primary-color, 30);
+    height: 100%;
+    padding: 0 1em;
     margin-left: -100%;
-    background: #f3f3f3;
+    transition: margin 0.3s ease;
     .settings-area-active & {
         margin-left: 0;
+    }
+    @include breakpoint($medium-columns) {
+        @include span($side / 2);
+        padding: 0 1em;
+        margin-left: -100%;
     }
 }
 
