@@ -16,6 +16,7 @@ $side: 12 - $anchor;
 .page {
     @include span(12);
     margin-right: -100%;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .settings-area {
