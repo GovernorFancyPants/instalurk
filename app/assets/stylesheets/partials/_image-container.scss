@@ -37,7 +37,7 @@
         border: 1px solid #efefef;
         font-weight: 100;
         span {
-            color: #2A9DBB;
+            color: darken($primary-color, 20);
         }
     }
     img {

@@ -45,17 +45,16 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'js/vendor/*.js',
-                    'js/main.js'
+                    'app/assets/javascripts/*.js'
                 ],
-                dest: 'js/build/production.js'
+                dest: 'app/assets/javascripts/test.js'
             }
         },
 
         uglify: {
             build: {
-                src: 'js/build/production.js',
-                dest: 'js/build/production.min.js'
+                src: 'app/assets/javascripts/test.js',
+                dest: 'app/assets/javascripts/test.min.js'
             }
         },
 
