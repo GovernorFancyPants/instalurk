@@ -9,7 +9,7 @@
     transform: translateY(-50%);
     background-color: rgba(157, 79, 187, 0.85);
     text-align: center;
-    padding: 0 0 3rem 0;
+    padding: 3rem 0 4rem 0;
     font-weight: 100;
     line-height: 1.7;
     .icon-pictoloc_org {
@@ -33,7 +33,9 @@
 .splash-description {
     font-size: 1.5rem;
     //text-align: center;
-    padding: 0 5rem;
+    padding: 2rem 0;
     color: #fff;
+    width: 50%;
+    margin: 0 auto;
     padding-bottom: 2em;
 }
